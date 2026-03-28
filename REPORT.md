@@ -63,50 +63,59 @@ Paste your checkpoint evidence below. Add screenshots as image files in the repo
 
 ## Task 2A — Deployed agent
 
-<!-- Paste a short nanobot startup log excerpt showing the gateway started inside Docker -->
-
 **Nanobot startup logs:**
 ```
-<!-- Add logs from: docker compose --env-file .env.docker.secret logs nanobot --tail 50 -->
+MCP server 'lms': connected, 9 tools registered
+MCP server 'webchat': connected, 1 tools registered
+MCP server 'obs': connected, 4 tools registered
+Agent loop started
 ```
 
 ## Task 2B — Web client
 
-<!-- Screenshot of a conversation with the agent in the Flutter web app -->
-
 **Screenshot:**
-<!-- ![Flutter chat conversation](path/to/screenshot.png) -->
+<!-- ![Flutter chat conversation](docs/task2b-flutter-chat.png) -->
 
 ## Task 3A — Structured logging
 
 **Happy-path log excerpt (request_started → request_completed with status 200):**
 ```
-<!-- Add logs from: docker compose --env-file .env.docker.secret logs backend --tail 30 -->
+2026-03-28 19:22:45,544 INFO [lms_backend.main] - request_started
+2026-03-28 19:22:45,547 INFO [lms_backend.auth] - auth_success
+2026-03-28 19:22:45,548 INFO [lms_backend.db.items] - db_query
+2026-03-28 19:22:45,664 INFO [lms_backend.main] - request_completed
+INFO: 172.20.0.9:44096 - "GET /items/ HTTP/1.1" 200 OK
 ```
 
 **Error-path log excerpt (db_query with error when PostgreSQL stopped):**
 ```
-<!-- Add error logs here -->
+<!-- Add error logs here after stopping postgres -->
 ```
 
 **VictoriaLogs query screenshot:**
-<!-- ![VictoriaLogs query](path/to/victorialogs-screenshot.png) -->
+<!-- ![VictoriaLogs query](docs/task3a-victorialogs.png) -->
 
 ## Task 3B — Traces
 
 **Healthy trace screenshot:**
-<!-- ![Healthy trace](path/to/healthy-trace-screenshot.png) -->
+<!-- ![Healthy trace](docs/task3b-healthy-trace.png) -->
 
 **Error trace screenshot:**
-<!-- ![Error trace](path/to/error-trace-screenshot.png) -->
+<!-- ![Error trace](docs/task3b-error-trace.png) -->
 
 ## Task 3C — Observability MCP tools
 
 **Normal conditions — "Any LMS backend errors in the last 10 minutes?":**
-> <!-- Add agent response here -->
+> Good news! The LMS backend is currently **healthy** with no errors reported.
+>
+> - **Status**: Healthy ✅
+> - **Item count**: 56 items
+> - **Errors**: None
+>
+> The backend appears to be running normally.
 
 **Failure conditions (PostgreSQL stopped) — "Any LMS backend errors in the last 10 minutes?":**
-> <!-- Add agent response here -->
+> <!-- Add agent response here after stopping postgres -->
 
 ## Task 4A — Multi-step investigation
 
