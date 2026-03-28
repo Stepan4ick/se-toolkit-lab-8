@@ -66,6 +66,19 @@ def resolve_config() -> str:
             if webchat_relay_token:
                 config["tools"]["mcpServers"]["webchat"]["env"]["NANOBOT_WEBCCHAT_UI_RELAY_TOKEN"] = webchat_relay_token
 
+    # Override MCP server env vars for observability (VictoriaLogs and VictoriaTraces)
+    victorialogs_url = os.environ.get("NANOBOT_VICTORIALOGS_URL")
+    victoriatraces_url = os.environ.get("NANOBOT_VICTORIATRACES_URL")
+
+    if "tools" in config and "mcpServers" in config["tools"]:
+        if "obs" in config["tools"]["mcpServers"]:
+            if "env" not in config["tools"]["mcpServers"]["obs"]:
+                config["tools"]["mcpServers"]["obs"]["env"] = {}
+            if victorialogs_url:
+                config["tools"]["mcpServers"]["obs"]["env"]["NANOBOT_VICTORIALOGS_URL"] = victorialogs_url
+            if victoriatraces_url:
+                config["tools"]["mcpServers"]["obs"]["env"]["NANOBOT_VICTORIATRACES_URL"] = victoriatraces_url
+
     # Override channel settings from env vars
     webchat_host = os.environ.get("NANOBOT_WEBCHAT_CONTAINER_ADDRESS")
     webchat_port = os.environ.get("NANOBOT_WEBCHAT_CONTAINER_PORT")
