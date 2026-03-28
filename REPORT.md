@@ -65,21 +65,48 @@ Paste your checkpoint evidence below. Add screenshots as image files in the repo
 
 <!-- Paste a short nanobot startup log excerpt showing the gateway started inside Docker -->
 
+**Nanobot startup logs:**
+```
+<!-- Add logs from: docker compose --env-file .env.docker.secret logs nanobot --tail 50 -->
+```
+
 ## Task 2B — Web client
 
 <!-- Screenshot of a conversation with the agent in the Flutter web app -->
 
+**Screenshot:**
+<!-- ![Flutter chat conversation](path/to/screenshot.png) -->
+
 ## Task 3A — Structured logging
 
-<!-- Paste happy-path and error-path log excerpts, VictoriaLogs query screenshot -->
+**Happy-path log excerpt (request_started → request_completed with status 200):**
+```
+<!-- Add logs from: docker compose --env-file .env.docker.secret logs backend --tail 30 -->
+```
+
+**Error-path log excerpt (db_query with error when PostgreSQL stopped):**
+```
+<!-- Add error logs here -->
+```
+
+**VictoriaLogs query screenshot:**
+<!-- ![VictoriaLogs query](path/to/victorialogs-screenshot.png) -->
 
 ## Task 3B — Traces
 
-<!-- Screenshots: healthy trace span hierarchy, error trace -->
+**Healthy trace screenshot:**
+<!-- ![Healthy trace](path/to/healthy-trace-screenshot.png) -->
+
+**Error trace screenshot:**
+<!-- ![Error trace](path/to/error-trace-screenshot.png) -->
 
 ## Task 3C — Observability MCP tools
 
-<!-- Paste agent responses to "any errors in the last hour?" under normal and failure conditions -->
+**Normal conditions — "Any LMS backend errors in the last 10 minutes?":**
+> <!-- Add agent response here -->
+
+**Failure conditions (PostgreSQL stopped) — "Any LMS backend errors in the last 10 minutes?":**
+> <!-- Add agent response here -->
 
 ## Task 4A — Multi-step investigation
 
