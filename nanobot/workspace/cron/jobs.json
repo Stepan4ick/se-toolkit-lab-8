@@ -1,4 +1,53 @@
 {
   "version": 1,
-  "jobs": []
+  "jobs": [
+    {
+      "id": "b694a072",
+      "name": "LMS Health Check: Check for ba",
+      "enabled": true,
+      "schedule": {
+        "kind": "every",
+        "atMs": null,
+        "everyMs": 120000,
+        "expr": null,
+        "tz": null
+      },
+      "payload": {
+        "kind": "agent_turn",
+        "message": "LMS Health Check: Check for backend errors in the last 2 minutes and report status",
+        "deliver": true,
+        "channel": "webchat",
+        "to": "499eaeef-c386-40c5-a8b9-076f99dd467b"
+      },
+      "state": {
+        "nextRunAtMs": 1774735990064,
+        "lastRunAtMs": 1774735858386,
+        "lastStatus": "ok",
+        "lastError": null,
+        "runHistory": [
+          {
+            "runAtMs": 1774735584956,
+            "status": "ok",
+            "durationMs": 19222,
+            "error": null
+          },
+          {
+            "runAtMs": 1774735724181,
+            "status": "ok",
+            "durationMs": 14204,
+            "error": null
+          },
+          {
+            "runAtMs": 1774735858386,
+            "status": "ok",
+            "durationMs": 11678,
+            "error": null
+          }
+        ]
+      },
+      "createdAtMs": 1774735464955,
+      "updatedAtMs": 1774735870064,
+      "deleteAfterRun": false
+    }
+  ]
 }

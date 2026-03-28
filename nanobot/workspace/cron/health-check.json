@@ -1,0 +1,6 @@
+{
+  "name": "LMS Health Check",
+  "schedule": "*/2 * * * *",
+  "enabled": true,
+  "prompt": "Check for LMS backend errors in the last 2 minutes. If there are errors, summarize what failed. If no errors, report that the system looks healthy."
+}
