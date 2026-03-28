@@ -20,8 +20,8 @@
         "to": "499eaeef-c386-40c5-a8b9-076f99dd467b"
       },
       "state": {
-        "nextRunAtMs": 1774735990064,
-        "lastRunAtMs": 1774735858386,
+        "nextRunAtMs": 1774738084873,
+        "lastRunAtMs": 1774737956186,
         "lastStatus": "ok",
         "lastError": null,
         "runHistory": [
@@ -42,11 +42,107 @@
             "status": "ok",
             "durationMs": 11678,
             "error": null
+          },
+          {
+            "runAtMs": 1774735990066,
+            "status": "ok",
+            "durationMs": 14697,
+            "error": null
+          },
+          {
+            "runAtMs": 1774736124765,
+            "status": "ok",
+            "durationMs": 12715,
+            "error": null
+          },
+          {
+            "runAtMs": 1774736257481,
+            "status": "ok",
+            "durationMs": 11537,
+            "error": null
+          },
+          {
+            "runAtMs": 1774736389019,
+            "status": "ok",
+            "durationMs": 11941,
+            "error": null
+          },
+          {
+            "runAtMs": 1774736520961,
+            "status": "ok",
+            "durationMs": 11012,
+            "error": null
+          },
+          {
+            "runAtMs": 1774736651975,
+            "status": "ok",
+            "durationMs": 10091,
+            "error": null
+          },
+          {
+            "runAtMs": 1774736782067,
+            "status": "ok",
+            "durationMs": 9758,
+            "error": null
+          },
+          {
+            "runAtMs": 1774736911827,
+            "status": "ok",
+            "durationMs": 9056,
+            "error": null
+          },
+          {
+            "runAtMs": 1774737040884,
+            "status": "ok",
+            "durationMs": 11074,
+            "error": null
+          },
+          {
+            "runAtMs": 1774737171959,
+            "status": "ok",
+            "durationMs": 11785,
+            "error": null
+          },
+          {
+            "runAtMs": 1774737303745,
+            "status": "ok",
+            "durationMs": 9296,
+            "error": null
+          },
+          {
+            "runAtMs": 1774737433043,
+            "status": "ok",
+            "durationMs": 15899,
+            "error": null
+          },
+          {
+            "runAtMs": 1774737568943,
+            "status": "ok",
+            "durationMs": 8605,
+            "error": null
+          },
+          {
+            "runAtMs": 1774737697549,
+            "status": "ok",
+            "durationMs": 10009,
+            "error": null
+          },
+          {
+            "runAtMs": 1774737827559,
+            "status": "ok",
+            "durationMs": 8626,
+            "error": null
+          },
+          {
+            "runAtMs": 1774737956186,
+            "status": "ok",
+            "durationMs": 8687,
+            "error": null
           }
         ]
       },
       "createdAtMs": 1774735464955,
-      "updatedAtMs": 1774735870064,
+      "updatedAtMs": 1774737964873,
       "deleteAfterRun": false
     }
   ]
